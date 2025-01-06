@@ -10,8 +10,15 @@ import i18n from "./locales/index.js"
 //引入router路由
 import router from './router'
 
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+
+const pinia = createPinia()
+// pinia数据持久化
+pinia.use(piniaPluginPersistedstate)
 const app = createApp(App)
 app.use(i18n)
 app.use(router)
+app.use(pinia)
 app.component('SvgIcon', SvgIcon);
 app.mount('#app')

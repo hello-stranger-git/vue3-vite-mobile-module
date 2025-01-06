@@ -6,6 +6,7 @@
 3. 自动将px转换为rem使用的是postcss-pxtorem
 4. 图标使用svg插件vite-plugin-svg-icons
 5. 国际化多语言
+6. 状态管理pinna，数据持久化pinia-plugin-persistedstate
 
 
 
