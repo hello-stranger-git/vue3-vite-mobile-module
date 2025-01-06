@@ -2,13 +2,22 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from "path"
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { VantResolver } from '@vant/auto-import-resolver';
 export default defineConfig({
   plugins: [
     vue(),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(),'src/assets/icons')], // 需要缓存的图标文件夹
       symbolId: 'icon-[name]', //svg图标ID格式
-    })
+    }),
+    AutoImport({
+      resolvers: [VantResolver()],
+    }),
+    Components({
+      resolvers: [VantResolver()],
+    }),
   ],
   resolve: {
     alias: {

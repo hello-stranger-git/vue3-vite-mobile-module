@@ -11,7 +11,7 @@
   <hr>
   <p>{{ user.count }}</p>
   <span @click="user.increment">+</span><span @click="user.decrement">-</span>
-
+  <van-button type="primary">主要按钮</van-button>
 </template>
 <script setup>
 import { useI18n } from "vue-i18n";
