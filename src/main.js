@@ -6,9 +6,12 @@ import SvgIcon from '@/components/SvgIcon/SvgIcon.vue'
 // 引入自动生成的svg图标文件
 import 'virtual:svg-icons-register'
 // 引入i18n
-import i18n from "./locales/index.js";
+import i18n from "./locales/index.js"
+//引入router路由
+import router from './router'
 
 const app = createApp(App)
 app.use(i18n)
+app.use(router)
 app.component('SvgIcon', SvgIcon);
 app.mount('#app')

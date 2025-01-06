@@ -1,4 +1,5 @@
 <template>
+  <router-view/>
   <p>123</p>
   <div>456</div>
   <span class="yellow">789</span>
