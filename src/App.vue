@@ -18,14 +18,19 @@ import { useI18n } from "vue-i18n";
 import { ref } from 'vue'
 import { useUserStore } from '@/store/index'
 const { t, locale } = useI18n();
+import { getVersion } from '@/api/user'
 const changgeLanguageEn = ()=>{
   locale.value = 'en'; // 切换为英文
 }
 const changgeLanguageZh = ()=>{
   locale.value = 'zh'; // 切换为英文
 }
-
 const user = useUserStore();
+const getVersionTest = async () => {
+  let data = await getVersion()
+  console.log(data)
+}
+getVersionTest();
 </script>
 
 <style lang="scss" scoped>

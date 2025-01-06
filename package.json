@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --mode development",
+    "prod": "vite --mode production",
+    "test": "vite --mode test",
+    "build:dev": "vite build --mode development",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "fast-glob": "^3.3.3",
     "pinia": "^2.3.0",
     "pinia-plugin-persistedstate": "^4.2.0",

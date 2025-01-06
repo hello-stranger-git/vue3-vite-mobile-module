@@ -7,6 +7,7 @@
 4. 图标使用svg插件vite-plugin-svg-icons
 5. 国际化多语言
 6. 状态管理pinna，数据持久化pinia-plugin-persistedstate
+7. 网络请求使用axios
 
 
 
