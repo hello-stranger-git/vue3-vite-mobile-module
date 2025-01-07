@@ -9,6 +9,7 @@ import 'virtual:svg-icons-register'
 import i18n from "./locales/index.js"
 //引入router路由
 import router from './router'
+import '@/assets/font/font.scss'
 
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'

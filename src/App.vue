@@ -1,7 +1,7 @@
 <template>
   <router-view/>
   <p>123</p>
-  <div>456</div>
+  <div class="font">456</div>
   <span class="yellow">789</span>
   <svgIcon customClass="customClass" name="svgTest"></svgIcon>
   <!-- 中文显示姓名,英文显示name -->
@@ -34,11 +34,17 @@ getVersionTest();
 </script>
 
 <style lang="scss" scoped>
+#app {
+  font-family: 'wcss';
+}
 p{
   font-size: 12px;
   color: $primary-color;
 }
 .customClass{
   color: pink;
+}
+.font{
+  font-family: 'pf';
 }
 </style>
